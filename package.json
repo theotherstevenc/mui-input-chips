@@ -1,0 +1,32 @@
+{
+  "name": "mui-input-chips",
+  "version": "1.0.0",
+  "description": "React component library with input chips built on Material-UI",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["react", "components", "ui", "chips", "input", "material-ui"],
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "@mui/material": ">=5.0.0",
+    "@mui/icons-material": ">=5.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "rollup": "^3.0.0",
+    "rollup-plugin-typescript2": "^0.34.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "typescript": "^4.9.0"
+  }
+}
