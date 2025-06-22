@@ -1,32 +1,52 @@
 {
   "name": "mui-input-chips",
   "version": "1.0.0",
-  "description": "React component library with input chips built on Material-UI",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
+  "description": "A Material-UI input component with chips functionality",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "type-check": "tsc --noEmit",
     "prepublishOnly": "npm run build"
   },
-  "keywords": ["react", "components", "ui", "chips", "input", "material-ui"],
-  "license": "MIT",
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0",
+    "@emotion/react": ">=11.0.0",
+    "@emotion/styled": ">=11.0.0",
+    "@mui/icons-material": ">=5.0.0",
     "@mui/material": ">=5.0.0",
-    "@mui/icons-material": ">=5.0.0"
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "rollup": "^3.0.0",
-    "rollup-plugin-typescript2": "^0.34.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "typescript": "^4.9.0"
-  }
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.0",
+    "@mui/material": "^5.15.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.2.0"
+  },
+  "keywords": [
+    "react",
+    "mui",
+    "material-ui",
+    "chips",
+    "input",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
 }
