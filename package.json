@@ -1,6 +1,6 @@
 {
   "name": "mui-input-chips",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Material-UI input component with chips functionality",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -19,7 +19,8 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "type-check": "tsc --noEmit",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "patch": "npm version patch --no-git-tag-version && git add package.json package-lock.json && git commit -m \"chore: bump version to v$(node -p 'require(\"./package.json\").version')\""
   },
   "peerDependencies": {
     "@emotion/react": ">=11.0.0",
